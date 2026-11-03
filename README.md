@@ -1,1 +1,1 @@
-## <p align="center"> TUI Anime/Manga Tacker </p>
+## <p align="center"> TUI Anime/Manga Tracker </p>
