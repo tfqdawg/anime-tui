@@ -1,2 +1,1 @@
-# anime-tui
-TUI anime/manga racker in C.
+## <p align="center"> TUI Anime/Manga Tacker </p>
