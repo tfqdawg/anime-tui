@@ -229,7 +229,7 @@ static void draw(const char *msg){
 	if(msg && *msg) mvaddnstr(LINES - 2, 1, msg, COLS - 2);
 	attron(A_DIM);
 	mvaddnstr(LINES - 1, 1,
-			"[Enter] open | [+/-] progress | [a]dd | [e] link | [t]itle | [d]elete | [q]uit", COLS - 2);
+			"[Enter] open  |  [+/-] progress  |  [a]dd  |  [e] link  |  [t]itle  |  [d]elete  |  [q]uit", COLS - 2);
 	attroff(A_DIM);
 	refresh();
 }
