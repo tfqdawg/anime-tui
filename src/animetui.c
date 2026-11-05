@@ -201,7 +201,7 @@ static void add_entry(void){
 static void draw(const char *msg){
 	erase();
 	attron(A_BOLD);
-	mvprintw(0, 1, "Anime / Manga Tracker  (%d)", count);
+	mvprintw(0, 1, "Anime & Manga Tracker  (%d Entries)", count);
 	attroff(A_BOLD);
 
 	int rows = LINES - 3;
@@ -220,11 +220,11 @@ static void draw(const char *msg){
 		mvprintw(y, 1, "%-5s", e->kind[0] == 'a' ? "ANIME" : "MANGA");
 		mvaddnstr(y, 7, e->title, tw);
 		mvprintw(y, 7 + tw + 1, "%s %-4d %s",
-						 e->kind[0] == 'a' ? "ep" : "ch", e->progress, *e->url ? "link" : "");
+						 e->kind[0] == 'a' ? "Ep" : "Ch", e->progress, *e->url ? "link" : "");
 		if (hl) attroff(A_REVERSE);
 	}
 
-	if(!count) mvprintw(2, 2, "Nothing tracked yet - press a to add an entry.");
+	if(!count) mvprintw(2, 2, "No entry yet!  press [a] to add an entry.");
 
 	if(msg && *msg) mvaddnstr(LINES - 2, 1, msg, COLS - 2);
 	attron(A_DIM);
